@@ -17,6 +17,12 @@ document.addEventListener("alpine:init", () => {
                 "pizza_id" : pizzaId
                 })
             },
+            removePizza(pizzaId){
+                return axios.post("https://pizza-api.projectcodex.net/api/pizza-cart/remove",{
+                "cart_code": this.cartId,
+                "pizza_id" : pizzaId
+                })
+            },
             showCartData(){
                 this.getCart().then(result =>{
                     const cartData = result.data;
@@ -40,7 +46,9 @@ document.addEventListener("alpine:init", () => {
             })
             },
             removePizzaFromCart(pizzaId){
-
+                this.removePizza(pizzaId).then(()=>{
+                    this.showCartData()
+            })
             }
         }
     })

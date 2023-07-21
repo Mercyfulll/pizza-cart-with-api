@@ -31,9 +31,9 @@
                                <td x-text="pizza.size"></td>
                                <td x-text="pizza.price"></td>
                                <td>
-                                <button>+</button>
+                                <button x-on:click="addPizzaToCart(pizza.id)">+</button>
                                <span x-text="pizza.qty"></span>
-                               <button>-</button>
+                               <button x-on:click="removePizzaFromCart(pizza.id)">-</button>
                                </td>
                                
                                 <td x-text="pizza.total"></td>

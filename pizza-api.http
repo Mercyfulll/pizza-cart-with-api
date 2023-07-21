@@ -22,7 +22,7 @@ content-type: application/json
 
 {
     "cart_code": "RlFqOyo9gT",
-	"pizza_id" : 3
+	"pizza_id" : 6
 }
 
 ### Add a pizza to the cart
