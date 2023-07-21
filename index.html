@@ -33,14 +33,14 @@
                                <td>
                                 <button>+</button>
                                <span x-text="pizza.qty"></span>
-                               <button>+</button>
+                               <button>-</button>
                                </td>
                                
                                 <td x-text="pizza.total"></td>
                             </tr>
                         </template>
-                        <td colspan="4">total</td>
-                        <td><span x-text="cartTotal"></span></td>
+                        <td colspan="3">Total</td>
+                        <td colspan="2" style="text-align: right;">R<span x-text="cartTotal"></span></td>
                     </tr>
                     <tr>
                         <td colspan="3">Pay now</td>
@@ -56,11 +56,10 @@
     <template x-for="pizza in pizzas">
         <div class="pizza">
             <h4 x-text="pizza.flavour"></h4>
-            R<span x-text="pizza.price"></span>
-            <strong>      
+            R<span x-text="pizza.price"></span>            
             <span x-text="pizza.size"></span>
-            </strong>
-            <button class="Btn">Add to cart</button>
+
+            <button class="Btn" @click="addPizzaToCart(pizza.id)">Add to cart</button>
         </div>
     </template>
 
