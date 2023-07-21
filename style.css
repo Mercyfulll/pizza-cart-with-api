@@ -1,0 +1,45 @@
+.container{
+    background-color: #202A44;
+    color: aliceblue;
+    padding-left: 2em;
+    padding-right: 4em;
+    font-style: normal;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pizza{
+    border: 1px solid;
+    margin-bottom: 1em;
+    padding: 2.2em;
+    display: inline-block;
+    margin-right: 2em;
+    margin-left: 1em;
+    background-color:grey;
+    width: auto;
+}
+.pizzas{
+    width: auto;
+}
+
+table, th, td{
+    border: 1px solid snow;
+    border-collapse: collapse;
+    padding: 0.5em;
+}
+table{
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.cart{
+    display: flex;
+    justify-content: flex-end;
+    justify-items: flex-end;
+}
+.Btn{
+    padding: 0.3em;
+    margin-left: 0.3em;
+    background-color:orange;
+    border-radius: 15px;
+}
+h4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
