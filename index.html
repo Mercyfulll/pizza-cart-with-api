@@ -13,10 +13,16 @@
 <body x-data="pizzaCart">
     <div class="container">
         <h1 x-text="title"></h1>
+        <div>
+            Username : <span x-text="username"></span>
+        </div>
+        <div>
+            Cart code : <span x-text="cartId"></span>
+        </div>
         <div class="cart">
-            <div class="cart2">
+            <div class="cart2" x-show=" cartTotal > 0">
                 <h2>Your cart</h2>
-                <div class="message">message here</div>
+                <div class="message" x-text="message">message here</div>
                 <table>
                     <tr>
                         <th>Flavour</th>
@@ -44,8 +50,8 @@
                     </tr>
                     <tr>
                         <td colspan="3">Pay now</td>
-                        <td><input type="text"></td>
-                        <td><button>Pay</button></td>
+                        <td><input type="text" x-model="paymentAmount"></td>
+                        <td><button x-on:click="payForCart()">Pay</button></td>
                     </tr>
                 </table>
             </div>
